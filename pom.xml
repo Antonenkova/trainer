@@ -5,12 +5,18 @@
   <groupId>ru.antonenkova</groupId>
   <artifactId>trainer</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
 
   <name>trainer</name>
   <url>http://maven.apache.org</url>
+    <modules>
+      <module>trainer_domain</module>
+      <module>trainer_ui_console</module>
+      <module>trainer_db_jdbc</module>
+      <module>trainer_db_spring_jdbc</module>
+    </modules>
 
-  <parent>
+    <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>3.2.2</version>
@@ -22,12 +28,6 @@
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
-      <version>5.12.0-RC1</version>
-      <scope>test</scope>
-    </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter</artifactId>
