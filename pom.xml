@@ -14,6 +14,7 @@
       <module>trainer_ui_console</module>
       <module>trainer_db_jdbc</module>
       <module>trainer_db_spring_jdbc</module>
+        <module>trainer_ui_swing</module>
     </modules>
 
     <parent>
