@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Lazy;
 import javax.sql.DataSource;
 
 @Configuration
-public class DbConfig {
+public class DbJdbcConfig {
     @Value("${server}") private String server;
     @Value("${database}") private String database;
     @Value("${user}") private String user;

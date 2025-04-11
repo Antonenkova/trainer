@@ -19,7 +19,7 @@
     <dependencies>
         <dependency>
             <groupId>ru.antonenkova</groupId>
-            <artifactId>trainer_db_spring_jdbc</artifactId>
+            <artifactId>trainer_db_spring_hibernate</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

@@ -14,13 +14,14 @@
       <module>trainer_ui_console</module>
       <module>trainer_db_jdbc</module>
       <module>trainer_db_spring_jdbc</module>
-        <module>trainer_ui_swing</module>
+      <module>trainer_ui_swing</module>
+      <module>trainer_db_spring_hibernate</module>
     </modules>
 
     <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.2.2</version>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-parent</artifactId>
+      <version>3.2.2</version>
     <relativePath/>
   </parent>
 
