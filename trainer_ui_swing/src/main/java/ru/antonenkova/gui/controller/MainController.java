@@ -1,6 +1,7 @@
 package ru.antonenkova.gui.controller;
 
 import org.springframework.stereotype.Controller;
+import ru.antonenkova.client.QuestionClient;
 import ru.antonenkova.domain.model.OpenQuestionCard;
 import ru.antonenkova.domain.service.QuestionService;
 import ru.antonenkova.gui.model.QuestionTableModel;
@@ -11,14 +12,10 @@ import java.util.List;
 
 @Controller
 public class MainController implements Runnable {
-    private final QuestionService service;
+    private final QuestionClient service = new QuestionClient();
     private List<OpenQuestionCard> questions;
     private QuestionTableModel model;
     private JTable table;
-
-    public MainController(QuestionService service) {
-        this.service = service;
-    }
 
     @Override
     public void run() {
@@ -47,7 +44,7 @@ public class MainController implements Runnable {
             if (answer == null) return;
 
             OpenQuestionCard newCard = new OpenQuestionCard(Long.parseLong(id), question, answer);
-            service.save(newCard);
+            service.create(newCard);
             reloadData();
         });
 
@@ -67,7 +64,7 @@ public class MainController implements Runnable {
             if (newAnswer == null) return;
 
             OpenQuestionCard newCard = new OpenQuestionCard(oldCard.getId(), newQuestion, newAnswer);
-            service.save(newCard);
+            service.update(newCard);
             reloadData();
         });
 

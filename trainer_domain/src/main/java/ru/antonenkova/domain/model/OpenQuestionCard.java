@@ -7,6 +7,12 @@ public class OpenQuestionCard {
     private final String question;
     private final String expectedAnswer;
 
+    public OpenQuestionCard() {
+        this.id = null;
+        this.question = null;
+        this.expectedAnswer = null;
+    }
+
     public OpenQuestionCard(Long id, String question, String expectedAnswer) {
         if (Objects.isNull(id) || id <= 0) {
             throw new IllegalArgumentException("id должен быть натуральным");
