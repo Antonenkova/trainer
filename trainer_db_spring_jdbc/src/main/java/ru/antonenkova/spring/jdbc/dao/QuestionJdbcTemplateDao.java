@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-@Primary
 public class QuestionJdbcTemplateDao implements QuestionRepository {
     private static final String tableName = "Tasks";
     private static final String idColumnName = "id";
