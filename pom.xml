@@ -16,6 +16,7 @@
       <module>trainer_db_spring_jdbc</module>
       <module>trainer_ui_swing</module>
       <module>trainer_db_spring_hibernate</module>
+      <module>trainer_api</module>
     </modules>
 
     <parent>
